@@ -6,23 +6,30 @@
         xmlns:local="clr-namespace:legoFeladat"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#5B5577">
+    <Grid Background="#373f51">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
-        <Button Content="Fájl Megnyitása" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="10" Click="OpenFile_Click"/>
+        <Button Background="#3D394F" Foreground="White" Content="Fájl Megnyitása" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Margin="10" Click="Button_Click_1"/>
          <DataGrid AutoGenerateColumns="False" Grid.Row="2" Background="#998fc7">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#5B5577"/>
+                    <Setter Property="Foreground" Value="#BCB8CF"/>
+                    <!-- Fejléc szövegszíne -->
+                </Style>
+            </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ItemID" Width="150"/>
-                <DataGridTextColumn Header="ItemName" Width="150"/>
-                <DataGridTextColumn Header="CategoryName" Width="150"/>
-                <DataGridTextColumn Header="ColorName" Width="150"/>
-                <DataGridTextColumn Header="Qty" Width="150"/>
+                <DataGridTextColumn Header="ItemID" Width="*"/>
+                <DataGridTextColumn Header="ItemName" Width="*"/>
+                <DataGridTextColumn Header="CategoryName" Width="*"/>
+                <DataGridTextColumn Header="ColorName" Width="*"/>
+                <DataGridTextColumn Header="Qty" Width="*"/>
                 </DataGrid.Columns>
         </DataGrid>
 
-        <TextBox Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="20" Width="200" Margin="200 -10 0 0"/>
+        <TextBox Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="20" Width="200" Margin="200 0 0 0"/>
     </Grid>
 </Window>
    <!--d4c3fc    73453ba   373f51-->

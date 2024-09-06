@@ -22,16 +22,18 @@ namespace legoFeladat
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+       
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "BSX Files (*.bsx)|*.bsx|All Files (*.*)|*.*";
 
             if (openFileDialog.ShowDialog() == true)
             {
-               
+
                 string filePath = openFileDialog.FileName;
-                
+
             }
         }
     }
